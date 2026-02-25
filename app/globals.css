@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+    --bg-primary: #000000;
+    --bg-secondary: #11161d;
+    --bg-tertiary: #151b23;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+    --border-subtle: rgba(255, 255, 255, 0.06);
+    --border-strong: rgba(255, 255, 255, 0.12);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --text-primary: #f5f7fa;
+    --text-secondary: #9aa4b2;
+    --text-muted: #6b7280;
+
+    --accent: #4f46e5;
+    --accent-soft: rgba(79, 70, 229, 0.15);
+    }
+
+html {
+    background: var(--bg-primary);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-feature-settings: "ss01" on, "ss02" on;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* Subtle grid background */
+.hero-grid {
+    background-image:
+        linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+
+/* Animated noise overlay */
+.noise-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.035;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    mix-blend-mode: overlay;
+}
+
+/* Subtle floating animation */
+.float-slow {
+  animation: float 12s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(to right, #6366f1, #8b5cf6);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.footer-grid {
+    background-image:
+        linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 40s linear infinite;
+    }
+
+@keyframes gridMove {
+    from { background-position: 0 0; }
+    to { background-position: 100px 100px; }
 }
