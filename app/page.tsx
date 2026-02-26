@@ -14,7 +14,7 @@ export default function HomePage() {
             </div>
 
             {/* HERO */}
-            <div className="relative max-w-6xl mx-auto px-6 pt-40 pb-32 text-center">
+            <div className="relative max-w-6xl mx-auto px-6 md:pt-40 mt-12 pb-32 text-center">
 
                 <motion.div
                     initial={{ opacity: 0, y: 24 }}
@@ -30,7 +30,7 @@ export default function HomePage() {
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.15, duration: 0.7 }}
-                    className="mt-10 text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.05]"
+                    className="mt-10 text-4xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.05]"
                 >
                     Deployment Safety,
                     <span className="block text-neutral-400 font-normal">
@@ -42,7 +42,7 @@ export default function HomePage() {
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3, duration: 0.7 }}
-                    className="mt-8 text-lg md:text-xl text-neutral-400 max-w-3xl mx-auto leading-relaxed"
+                    className="mt-8 text-[15px] md:text-xl text-neutral-400 max-w-3xl mx-auto leading-relaxed"
                 >
                     BridgePreflight analyzes Node.js infrastructure, detects
                     deployment risks, and generates deterministic readiness
@@ -72,7 +72,7 @@ export default function HomePage() {
             </div>
 
             {/* FEATURES */}
-            <div className="relative py-20">
+            <div className="relative md:py-20">
                 <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
 
                     {[
@@ -110,7 +110,7 @@ export default function HomePage() {
                     Infrastructure Reliability Should Be Measurable
                 </h2>
 
-                <p className="mt-6 text-neutral-400 max-w-2xl mx-auto">
+                <p className="mt-6 text-neutral-400 max-w-2xl text-[15px] mx-auto">
                     BridgePreflight establishes deployment risk scoring as
                     a foundational control layer between development and production.
                 </p>
@@ -121,7 +121,7 @@ export default function HomePage() {
                 initial={{ opacity: 0, y: 60 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.7, duration: 0.9 }}
-                className="mt-24"
+                className="mt-18 md:mt-24"
             >
                 <CLIDemo />
             </motion.div>

@@ -68,11 +68,6 @@ export default function InvestorsPage() {
                         </div>
                     </div>
                 </div>
-
-                {/* Footer */}
-                <div className="mt-24 text-center text-gray-500 text-sm">
-                    © {new Date().getFullYear()} BridgePreflight. All rights reserved.
-                </div>
             </div>
 
             {/* Animations */}

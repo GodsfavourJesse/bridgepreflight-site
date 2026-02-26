@@ -33,7 +33,7 @@ export default function CLIDemo() {
 
     const scanLines: ScanLine[] = [
         { type: "command", text: "$ bridgepreflight scan" },
-        { type: "title", text: "Welcome to BridgePreflight — AI-native infrastructure readiness scanner" },
+        { type: "title", text: "Welcome to BridgePreflight — The Deployment Risk Intelligence Platform" },
         { type: "about", text: "BridgePreflight needs access to scan your entire project. Allow? (y/n): y" },
         { type: "title", text: "--- BridgePreflight Scan ---" },
         { type: "info", text: "" },
