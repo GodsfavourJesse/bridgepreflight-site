@@ -14,7 +14,7 @@ export default function HomePage() {
             </div>
 
             {/* HERO */}
-            <div className="relative max-w-6xl mx-auto px-6 md:pt-40 mt-12 pb-32 text-center">
+            <div className="relative max-w-6xl mx-auto px-6 md:pt-20 mt-12 pb-32 text-center">
 
                 <motion.div
                     initial={{ opacity: 0, y: 24 }}
